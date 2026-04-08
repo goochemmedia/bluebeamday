@@ -8,8 +8,7 @@ interface RegistrationSectionProps {
   lang: Lang;
 }
 
-const GOOGLE_SCRIPT_URL = "https://script.google.com/PLACEHOLDER";
-const CONTACT_EMAIL = "info@bouwplaatsautomatisering.nl";
+const FORMSPREE_URL = "https://formspree.io/f/mreodlej";
 
 const TSHIRT_SIZES = ["XS", "S", "M", "L", "XL", "XXL"];
 
@@ -73,34 +72,28 @@ export default function RegistrationSection({ lang }: RegistrationSectionProps) 
 
     setStatus("submitting");
 
-    const body = `Naam: ${formData.firstName} ${formData.lastName}
-Bedrijf: ${formData.company}
-E-mail: ${formData.email}
-Telefoon: ${formData.phone}
-T-shirt maat: ${formData.tshirt}
-Opmerkingen: ${formData.remarks}`;
-
-    // Open mailto in background
-    const subject = encodeURIComponent("Aanmelding BPA Bluebeam Day 2026");
-    const bodyEncoded = encodeURIComponent(body);
-    window.open(
-      `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${bodyEncoded}`,
-      "_blank"
-    );
-
-    // Also try to send to Google Sheets
     try {
-      await fetch(GOOGLE_SCRIPT_URL, {
+      const res = await fetch(FORMSPREE_URL, {
         method: "POST",
-        mode: "no-cors",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...formData, submittedAt: new Date().toISOString() }),
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          naam: `${formData.firstName} ${formData.lastName}`,
+          bedrijf: formData.company,
+          email: formData.email,
+          telefoon: formData.phone,
+          tshirt: formData.tshirt,
+          opmerkingen: formData.remarks,
+        }),
       });
-    } catch {
-      // Google Sheets is best-effort; mailto is primary
-    }
 
-    setStatus("success");
+      if (res.ok) {
+        setStatus("success");
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
+    }
   };
 
   const inputClass = (field: keyof FormData) =>

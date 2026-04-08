@@ -50,19 +50,19 @@ export default function CountdownTimer({ lang, targetDate }: CountdownTimerProps
   ];
 
   return (
-    <div className="flex items-center gap-3 sm:gap-4">
+    <div className="flex items-center gap-1.5 sm:gap-3 md:gap-4">
       {units.map((unit, i) => (
-        <div key={unit.label} className="flex items-center gap-3 sm:gap-4">
-          <div className="countdown-box px-3 py-2 sm:px-4 sm:py-3 text-center min-w-[60px] sm:min-w-[72px]">
-            <div className="text-2xl sm:text-3xl font-bold text-white tabular-nums leading-none">
+        <div key={unit.label} className="flex items-center gap-1.5 sm:gap-3 md:gap-4">
+          <div className="countdown-box px-2 py-1.5 sm:px-4 sm:py-3 text-center min-w-[52px] sm:min-w-[72px]">
+            <div className="text-xl sm:text-3xl font-bold text-white tabular-nums leading-none">
               {String(unit.value).padStart(2, "0")}
             </div>
-            <div className="text-xs text-blue-200 mt-1 font-medium uppercase tracking-wide">
+            <div className="text-[10px] sm:text-xs text-blue-200 mt-1 font-medium uppercase tracking-wide">
               {unit.label}
             </div>
           </div>
           {i < units.length - 1 && (
-            <span className="text-white/60 text-2xl font-light -mt-4 animate-pulse-slow">:</span>
+            <span className="text-white/60 text-lg sm:text-2xl font-light -mt-4 animate-pulse-slow">:</span>
           )}
         </div>
       ))}

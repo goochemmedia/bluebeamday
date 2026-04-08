@@ -35,18 +35,18 @@ export default function HeroSection({ lang }: HeroSectionProps) {
 
         {/* Title */}
         <h1
-          className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold text-white mb-4 leading-none tracking-tight animate-fade-in-up"
+          className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold text-white mb-4 leading-none tracking-tight animate-fade-in-up"
           style={{ animationDelay: "0.1s", opacity: 0, animationFillMode: "forwards" }}
         >
           BPA{" "}
-          <span className="block sm:inline bg-clip-text text-transparent bg-gradient-to-r from-blue-200 to-purple-200">
+          <span className="block bg-clip-text text-transparent bg-gradient-to-r from-blue-200 to-purple-200">
             Bluebeam Day
           </span>
         </h1>
 
         {/* Tagline */}
         <p
-          className="text-xl sm:text-2xl md:text-3xl text-white/85 font-light mb-10 animate-fade-in-up"
+          className="text-lg sm:text-2xl md:text-3xl text-white/85 font-light mb-10 animate-fade-in-up"
           style={{ animationDelay: "0.2s", opacity: 0, animationFillMode: "forwards" }}
         >
           {t.tagline}

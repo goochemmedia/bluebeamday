@@ -121,7 +121,7 @@ export default function LocationSection({ lang }: LocationSectionProps) {
           >
             <iframe
               title="Van der Valk Hotel Amersfoort"
-              src="https://maps.google.com/maps?q=Van+der+Valk+Hotel+Amersfoort-A1,+Woudweg+2,+3816+KX+Amersfoort&output=embed"
+              src="https://maps.google.com/maps?q=Ruimtevaart+22-24,+3824+MX+Amersfoort&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0 }}

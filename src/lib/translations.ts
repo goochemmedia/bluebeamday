@@ -51,7 +51,7 @@ export const translations = {
       sectionLabel: "Locatie",
       title: "Van der Valk Hotel Amersfoort",
       subtitle: "Een moderne, stijlvolle locatie langs de A1 bij Amersfoort, ideaal voor een professioneel evenement.",
-      address: "Woudweg 2, 3816 KX Amersfoort",
+      address: "Ruimtevaart 22-24, 3824 MX Amersfoort",
       directions: "Route plannen",
       features: [
         { icon: "🚗", label: "Ruime parkeergelegenheid" },
@@ -139,7 +139,7 @@ export const translations = {
       sectionLabel: "Location",
       title: "Van der Valk Hotel Amersfoort",
       subtitle: "A modern, stylish venue along the A1 near Amersfoort, ideal for a professional event.",
-      address: "Woudweg 2, 3816 KX Amersfoort",
+      address: "Ruimtevaart 22-24, 3824 MX Amersfoort",
       directions: "Get directions",
       features: [
         { icon: "🚗", label: "Ample parking" },
@@ -224,7 +224,7 @@ export const translations = {
       sectionLabel: "Veranstaltungsort",
       title: "Van der Valk Hotel Amersfoort",
       subtitle: "Ein modernes, stilvolles Hotel an der A1 bei Amersfoort, ideal für ein professionelles Event.",
-      address: "Woudweg 2, 3816 KX Amersfoort",
+      address: "Ruimtevaart 22-24, 3824 MX Amersfoort",
       directions: "Route planen",
       features: [
         { icon: "🚗", label: "Großzügige Parkmöglichkeiten" },

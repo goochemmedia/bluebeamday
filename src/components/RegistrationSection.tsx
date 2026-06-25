@@ -63,8 +63,8 @@ export default function RegistrationSection({ lang }: RegistrationSectionProps) 
             </p>
             <p className="text-gray-400 text-sm mt-4">
               Vragen? Neem contact op via{" "}
-              <a href="mailto:info@bpa.nl" className="text-blue-600 hover:underline">
-                info@bpa.nl
+              <a href="mailto:info@bouwplaatsautomatisering.nl" className="text-blue-600 hover:underline">
+                info@bouwplaatsautomatisering.nl
               </a>
             </p>
           </div>
